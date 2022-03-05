@@ -3,6 +3,7 @@ import express  from 'express';
 //import {Routes} from "../routes/routes.js";
 import {Database} from './database.js';
 import {Routes} from "../routes/routes.js";
+import cors from 'cors';
 
 // inicio config
 
@@ -31,7 +32,9 @@ async initializeApp(){
           express.urlencoded({
               extended: true
           }));
-      this.app.use(express.json())
+      this.app.use(express.json());
+
+      this.app.use(cors({origin: '*'}));
       }
 
       // conecion a la base de datos

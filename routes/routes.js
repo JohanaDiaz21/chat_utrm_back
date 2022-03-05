@@ -10,6 +10,7 @@ export class routes{
 
         app.get('/getUsers',userController.getUsers);
 
+        app.post('/api/create-user',userController.createUser);
 
 
         app.get('/' ,(req, res) =>{

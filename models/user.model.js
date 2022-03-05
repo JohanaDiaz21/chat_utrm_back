@@ -24,6 +24,6 @@ UserModel.init({
     }
 }, {
     sequelize:database,
-    tableName: 'usermodel',
+    tableName: 'user',
     timestamps: false,
 },)
